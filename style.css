@@ -1,0 +1,117 @@
+:root {
+  --mainbg: #191b28;
+  --maintext: #e5dffa69;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  /* border: 1px solid rgb(11, 65, 165); */
+}
+svg {
+  fill: rgba(255, 255, 255, 0.5);
+  width: 30px;
+  height: 30px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+body {
+  background-color: var(--mainbg);
+  color: rgb(255, 255, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#topBar {
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  /* padding: 0px 20px; */
+  h4 {
+    color: rgba(255, 255, 255, 0.377);
+  }
+  h2 {
+    color: white;
+  }
+  div {
+    display: inline-block;
+  }
+  svg {
+    height: 100%;
+  }
+  img {
+    height: 100%;
+    border-radius: 100px;
+  }
+}
+#appTitle {
+  width: 135px;
+  padding: 0px 10px;
+}
+.topBarIcon {
+  height: 50px;
+  width: 50px;
+  /* background-color: rgb(9, 3, 44); */
+  border: 2px solid rgba(255, 255, 255, 0.089);
+  border-radius: 100px;
+  padding: 3px;
+  margin: 0px 8px;
+  float: right;
+  text-align: center;
+}
+#searchBar {
+  background-color: rgba(222, 209, 255, 0.062);
+  border: none;
+  border-radius: 20px;
+  width: 80%;
+  height: 50px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  padding: 0px 20px;
+  input,
+  svg {
+    height: 100%;
+    background-color: initial;
+    border: none;
+  }
+  input {
+    margin: 0px 10px;
+    color: var(--maintext);
+    outline: none;
+  }
+}
+
+#bottumBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30vw;
+  background-color: rgba(80, 80, 80, 0.308);
+  text-align: center;
+  div {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 2%;
+    /* background-color: red; */
+    border: 2px solid white;
+  }
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+#bottumBar3 {
+  background: linear-gradient(
+    to bottom right,
+    rgb(240, 170, 165),
+    rgb(255, 83, 134),
+    rgb(243, 105, 213)
+  );
+  border-radius: 100px;
+}
