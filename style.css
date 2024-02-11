@@ -2,10 +2,6 @@
   --mainbg: #191b28;
   --maintext: #e5dffa69;
 }
-@font-face {
-  font-family: JikiTourai;
-  src: url(Fonts/JikiTourai.ttf);
-}
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -36,14 +32,10 @@ body {
   margin-top: 50px;
   /* padding: 0px 20px; */
   h4 {
-    color: rgba(244, 240, 255, 0.308);
-    font-family: "Open Sans", sans-serif;
+    color: rgba(255, 255, 255, 0.377);
   }
   h2 {
     color: white;
-    font-family: JikiTourai;
-    font-size: larger;
-    margin-top: 6px;
   }
   div {
     display: inline-block;
@@ -153,14 +145,11 @@ body {
   /* border: 2px solid violet; */
   margin-top: 185px;
 
-  text-shadow: 2px 2px 14px rgb(0, 0, 0);
   h3 {
     z-index: 2;
     /* border: 1px solid rgb(71, 0, 0); */
     font-family: "Open Sans", sans-serif;
-    color: rgb(212, 212, 212);
-    height: 20px;
-
+    color: rgba(255, 255, 255, 0.781);
     /* height: 30px; */
     /* width: 100%; */
     /* height: 18px; */
