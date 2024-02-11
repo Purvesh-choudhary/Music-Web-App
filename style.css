@@ -126,6 +126,10 @@ body {
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.185);
 }
 
+#musicPlayer {
+  border: 2px solid greenyellow;
+}
+
 #mainBanner {
   width: 80%;
   height: 290px;
@@ -183,9 +187,4 @@ body {
   #searchBar input {
     width: 55%;
   }
-}
-
-#musicPlayer {
-  border: 2px solid greenyellow;
-  height: 450px;
 }
