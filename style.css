@@ -29,6 +29,39 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+#startPop {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  background: linear-gradient(to top left, #191b28, #1e202d, #2a2c39);
+  width: 100vw;
+  height: 100vh;
+  border: 5px solid rgba(255, 255, 255, 0.288);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.137);
+    /* border: 5px solid rgb(255, 255, 255); */
+  }
+  h2 {
+    color: white;
+    font-family: JikiTourai;
+    font-size: 25px;
+    margin-top: 6px;
+  }
+  h4 {
+    color: rgba(244, 240, 255, 0.308);
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+  }
+}
+
 #topBar {
   width: 80%;
   display: block;
@@ -199,3 +232,49 @@ body {
     width: 55%;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+#musicPlayer {
+  border: 2px solid greenyellow;
+  height: 450px;
+}
+
+#musicCatalog {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 100;
+  }
+  h3 {
+  }
+  h4 {
+    font-weight: bold;
+    color: rgb(142, 33, 156);
+  }
+  h5 {
+  }
+  h6 {
+  }
+
+  div{
+    display: inline-block;
+    width: 80%;
+  }
+}
+.cat-Heads {
+  border: 2px solid rgb(6, 199, 173);
+  width: 100vw;
+}
+.cat-Hot_Music {
+  border: 2px solid rgb(231, 19, 221);
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+>>>>>>> Stashed changes
