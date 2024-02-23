@@ -30,6 +30,7 @@ body {
 }
 
 #startPop {
+  opacity: 1;
   display: flex;
   position: fixed;
   top: 0px;
@@ -41,7 +42,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  transition:all 2s;
+  transition-delay: 3s;
   img {
     width: 30%;
     margin-bottom: 20px;
@@ -186,6 +188,7 @@ body {
   border-radius: 50px;
 }
 
+
 #mainBannerTitle {
   /* border: 2px solid violet; */
   margin-top: 185px;
@@ -195,7 +198,7 @@ body {
     z-index: 2;
     /* border: 1px solid rgb(71, 0, 0); */
     font-family: "Open Sans", sans-serif;
-    color: rgb(212, 212, 212);
+    color: rgb(228, 228, 228);
     height: 20px;
 
     /* height: 30px; */
@@ -207,6 +210,8 @@ body {
     /* border: 1px solid rgb(0, 82, 54); */
     height: 15px;
     font-family: "Rancho", cursive;
+    color: rgb(255, 255, 255);
+
     font-size: 42px;
     font-weight: normal;
     /* height: 30px; */
@@ -232,49 +237,58 @@ body {
     width: 55%;
   }
 }
-<<<<<<< Updated upstream
-=======
 
 #musicPlayer {
   border: 2px solid greenyellow;
   height: 450px;
 }
 
-#musicCatalog {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  h3,
-  h4,
-  h5,
-  h6 {
+/* ??????????  HOTMUSIC SECTION   ???????????????????????????????? */
+
+.cat-Heads {
+  /* border: 1px solid red; */
+  height: 30px;
+  padding: 0px 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  h3{
     font-weight: 100;
+    float: left;
+    color: rgb(255 255 255 / 50%);
   }
-  h3 {
+  b{
+    color: rgb(255, 255, 255);
   }
   h4 {
     font-weight: bold;
-    color: rgb(142, 33, 156);
-  }
-  h5 {
-  }
-  h6 {
+    color: rgb(183 127 205);
+    float: right;
   }
 
-  div{
-    display: inline-block;
-    width: 80%;
-  }
 }
-.cat-Heads {
-  border: 2px solid rgb(6, 199, 173);
-  width: 100vw;
+
+
+#musicCatalog{
+  display: flex;
+  /* border: 2px solid greenyellow; */
+  justify-content: space-evenly;
 }
+
 .cat-Hot_Music {
-  border: 2px solid rgb(231, 19, 221);
+  /* border: 2px solid rgb(231, 19, 221); */
+  text-align: center;
   img {
     width: 100px;
     height: 100px;
+    border-radius: 20px;
+  }
+  h5{
+    font-size: 16px;
+    margin: 7px 0px;
+  }
+  h6{
+    font-size: 13px;
+    color: rgb(255 255 255 / 50%);
   }
 }
->>>>>>> Stashed changes
+
