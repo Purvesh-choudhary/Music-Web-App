@@ -300,3 +300,13 @@ body {
   }
 }
 
+
+#SeeAllSong{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(29, 64, 95);
+  /* position:fixed; */
+  /* top: 0px; */
+  z-index: 5;
+  padding: 30px;
+}
