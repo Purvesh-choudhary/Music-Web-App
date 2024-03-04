@@ -2,27 +2,33 @@
   --mainbg: #191b28;
   --maintext: #e5dffa69;
 }
+
 @font-face {
-  font-family: JikiTourai;
-  src: url(Fonts/JikiTourai.ttf);
+  font-family: MyFont;
+  src: url(Fonts/OMEGLE.ttf);
 }
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   /* border: 1px solid rgb(11, 65, 165); */
 }
+
 svg {
   fill: rgba(255, 255, 255, 0.5);
   width: 30px;
   height: 30px;
 }
+
 .left {
   float: left;
 }
+
 .right {
   float: right;
 }
+
 body {
   background-color: var(--mainbg);
   color: rgb(255, 255, 255);
@@ -42,21 +48,26 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition:all 2s;
+  transition: all 2s;
   transition-delay: 3s;
+
   img {
-    width: 30%;
-    margin-bottom: 20px;
+    width: 40%;
+    margin-bottom: 5px;
     border-radius: 100px;
-    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.137);
+    /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.137); */
     /* border: 5px solid rgb(255, 255, 255); */
   }
+
   h2 {
     color: white;
-    font-family: JikiTourai;
-    font-size: 25px;
-    margin-top: 6px;
+    font-family: MyFont;
+    letter-spacing: 2px;
+
+    font-size: 28px;
+    /* margin-top: 6px; */
   }
+
   h4 {
     color: rgba(244, 240, 255, 0.308);
     font-family: "Open Sans", sans-serif;
@@ -69,34 +80,42 @@ body {
   display: block;
   margin: auto;
   margin-top: 5%;
+
   /* padding: 0px 20px; */
   h4 {
     color: rgba(244, 240, 255, 0.308);
     font-family: "Open Sans", sans-serif;
   }
+
   h2 {
     color: white;
-    font-family: JikiTourai;
+    font-family: MyFont;
+    letter-spacing: 2px;
     font-size: larger;
     margin-top: 6px;
   }
+
   div {
     display: inline-block;
   }
+
   svg {
     height: 75%;
     width: 75%;
     padding-top: 5px;
   }
+
   img {
     height: 100%;
     border-radius: 100px;
   }
 }
+
 #appTitle {
   width: 135px;
   padding: 0px 10px;
 }
+
 .topBarIcon {
   height: 50px;
   width: 50px;
@@ -121,12 +140,14 @@ body {
   margin: auto;
   margin-top: 20px;
   padding: 0px 20px;
+
   input,
   svg {
     height: 100%;
     background-color: initial;
     border: none;
   }
+
   input {
     margin: 0px 10px;
     color: var(--maintext);
@@ -148,6 +169,7 @@ body {
   /* margin-top: 25px; */
   bottom: -1px;
 }
+
 .bottumBarDiv {
   width: 50px;
   /* border: 1px solid rgb(16, 142, 245); */
@@ -155,6 +177,7 @@ body {
   justify-content: center;
   margin: 0px 2%;
 }
+
 #bottumBar3 {
   /* border: 1px solid rgb(253, 208, 7); */
   width: 50px;
@@ -170,7 +193,8 @@ body {
   );
   box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.185);
 }
-#bottumTemp{
+
+#bottumTemp {
   width: 100%;
   height: 120px;
 }
@@ -189,15 +213,15 @@ body {
   /* display: flex; */
   justify-content: center;
   text-align: center;
-  background-image: url(Album/1.jpg);
+  background-image: url(Album/main.jpg);
   background-size: cover;
   border-radius: 50px;
   aspect-ratio: 1/1;
   object-fit: cover;
   box-shadow: #0000004f 0px 0px 20px 5px;
-  box-shadow: #0000004f 0px 0px 20px 5px;
-  
+  /* filter: grayscale(0.7); */
 }
+
 #mainBannerTitle {
   /* border: 2px solid violet; */
   /* margin-top: 185px; */
@@ -209,7 +233,8 @@ body {
   padding-bottom: 25px;
   /* background-color: rgb(101, 95, 95); */
   text-shadow: 2px 2px 14px rgb(0, 0, 0);
-  line-height: 25px;
+  line-height: 35px;
+
   h3 {
     z-index: 2;
     /* border: 1px solid rgb(255, 0, 0); */
@@ -217,6 +242,7 @@ body {
     color: rgb(228, 228, 228);
     font-weight: 100;
   }
+
   h1 {
     z-index: 5;
     /* border: 1px solid rgb(5, 255, 172); */
@@ -233,14 +259,17 @@ body {
     width: 35px;
     margin: 0px 2px;
   }
+
   #appTitle {
     width: 100px;
     padding: 0px 10px;
   }
+
   #topBar h4,
   h2 {
     font-size: 15px;
   }
+
   #searchBar input {
     width: 55%;
   }
@@ -259,49 +288,56 @@ body {
   padding: 0px 30px;
   margin-top: 40px;
   margin-bottom: 10px;
-  h3{
+
+  h3 {
     font-weight: 100;
     float: left;
     color: rgb(255 255 255 / 50%);
   }
-  b{
+
+  b {
     color: rgb(255, 255, 255);
   }
+
   h4 {
     font-weight: bold;
     color: rgb(183 127 205);
     float: right;
   }
-
 }
 
-
-#musicCatalog{
+#musicCatalog {
   display: flex;
   /* border: 2px solid greenyellow; */
   justify-content: space-evenly;
 }
 
+.CURRENTSONG {
+  filter: drop-shadow(0px 0px 20px #555b86);
+}
+
 .cat-Hot_Music {
   /* border: 2px solid rgb(231, 19, 221); */
   text-align: center;
+
   img {
     width: 100px;
     height: 100px;
     border-radius: 20px;
   }
-  h5{
+
+  h5 {
     font-size: 16px;
     margin: 7px 0px;
   }
-  h6{
+
+  h6 {
     font-size: 13px;
     color: rgb(255 255 255 / 50%);
   }
 }
 
-
-#SeeAllSong{
+#SeeAllSong {
   width: 100vw;
   height: 100vh;
   background-color: rgb(29, 64, 95);

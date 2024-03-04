@@ -1,72 +1,81 @@
-const startPop = document.getElementById('startPop');
-const MusicCatalog = document.getElementById('musicCatalog'); 
+const startPop = document.getElementById("startPop");
+const MusicCatalog = document.getElementById("musicCatalog");
 
 let currentAudioElement;
+let currentAudioElementSrc;
+let previousParentDiv;
 
 console.log("i");
 
 function startIntro() {
     function callstartintro() {
-    startPop.style.display = "none";
+        startPop.style.display = "none";
     }
     setTimeout(callstartintro, 5000);
-
 }
 
-MusicCatalog.addEventListener("click", async function (e){
+MusicCatalog.addEventListener("click", async function (e) {
     const target = e.target;
 
     if (target.tagName === "IMG") {
-        console.log("IMG IS CLICKED" + target.getAttribute("src"));
+        console.log("IMG IS CLICKED - " + target.getAttribute("src"));
         const parentDiv = target.parentElement;
         const sourceElement = parentDiv.querySelector("source");
         const audioSrc = sourceElement.getAttribute("src");
-        console.log("AUDIO SRC IS HERE - " + audioSrc); 
-        playingSong(audioSrc);
+        console.log("AUDIO SRC IS HERE - " + audioSrc);
 
-        if (currentAudioElement && !currentAudioElement.paused && currentAudioElement.src === audioSrc) {
+        if (
+            currentAudioElement &&
+            currentAudioElement.play &&
+            currentAudioElementSrc === audioSrc
+        ) {
             // If the clicked audio is already playing, pause it
-            currentAudioElement.pause();
+            if (!currentAudioElement.paused) {
+                console.log("Already Playing song is paused");
+                currentAudioElement.pause();
+
+                // currentAudioElement.pause();
+            } else {
+                console.log("Already Playing song is Played");
+                currentAudioElement.play();
+            }
+            parentDiv.classList.toggle("CURRENTSONG");
         } else {
             if (currentAudioElement && !currentAudioElement.paused) {
                 // If another audio is already playing, stop it
+                console.log("another playing song is paused");
                 await stopPlayingSong();
             }
             // Play the clicked audio
-            await playingSong(audioSrc);
+            console.log("Played Now");
+            await playingSong(audioSrc, parentDiv);
         }
+        // parentDiv.classList.toggle('CURRENTSONG');
     }
 });
 
-function playingSong(songsrc){
-    return new Promise((resolve, reject) => {
-        currentAudioElement = new Audio(songsrc);
-        currentAudioElement.play()
-            .then(() => {
-                resolve();
-            })
-            .catch((error) => {
-                console.error("Error playing audio:", error);
-                reject(error);
-            });
-    });
+function playingSong(songsrc, parentDiv) {
+    currentAudioElement = new Audio(songsrc);
+    currentAudioElementSrc = songsrc;
+    currentParentDiv = parentDiv;
+    currentAudioElement.play();
+    currentParentDiv.classList.add("CURRENTSONG");
+    if (previousParentDiv) {
+        previousParentDiv.classList.remove("CURRENTSONG");
+    }
+    previousParentDiv = currentParentDiv;
 }
 
 function stopPlayingSong() {
-    return new Promise((resolve, reject) => {
-        if (currentAudioElement && !currentAudioElement.paused) {
-            currentAudioElement.pause(); // Pause the currently playing song
-            currentAudioElement.currentTime = 0; // Reset playback to the beginning
-            resolve();
-        } else {
-            resolve(); // If no song is playing, resolve immediately
-        }
-    });
+    currentAudioElement.pause();
+    currentAudioElement.currentTime = 0;
+    currentAudioElementSrc = "";
+    if (previousParentDiv) {
+        previousParentDiv.classList.remove("CURRENTSONG");
+    }
 }
-
-
 
 window.onload = function () {
-    startPop.style.opacity = '0';
+    startPop.style.opacity = "0";
     startIntro();
-}
+};
